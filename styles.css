@@ -1,0 +1,473 @@
+/*
+color pallete:
+https://colorhunt.co/palettes/wedding
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+#nav-toggle, .burger-menu {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .burger-menu {
+        display: grid;
+        width: 40px;
+        justify-content: center;
+        padding-left: 3rem;
+    }
+
+    label > img {
+        width: 40px;
+        height: 40px;
+    }
+
+    #navbar > .nav-list {
+        display: none;
+    }
+
+    #nav-toggle:checked ~ .nav-list {
+        display: grid;
+        font-size: 16px;
+        justify-content: left;
+        text-align: center;
+        width: 20%;
+        gap: 2rem;
+    }
+
+    section > .section-header {
+        width: 67%;
+    }
+
+    #projects > .projects-grid {
+        font-size: 12px;
+        display: grid;
+        grid-template-areas: 
+            "project-1"
+            "project-2"
+            "project-3"
+            "project-4"
+            "project-5"
+            "project-6"
+            "project-7"
+            "project-8"
+            "project-9"
+            "button-container"
+    }
+
+    #projects > .projects-grid > .project-tile {
+        font-size: 14px;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    #skills > .skills-grid {
+        display: grid;
+        grid-template-areas:
+            "skill-1"
+            "skill-2"
+    }
+
+   .contact-section > .section-content >  #contact-content {
+        height: 120px;
+        width: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-section > .section-content >  #contact-content > .contact-item > a {
+        font-size: 10px;
+        width: 70px;
+    }
+
+    .contact-section > .section-content >  #contact-content > .contact-item > a > img {
+        width: 35px;
+    }
+
+}
+
+#navbar {
+    background-color: #181D31;
+    position: fixed;
+    display: flex;
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: flex-end;
+    width: 99%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.nav-item {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #6998AB;
+    padding: 0px 3rem 0px 3rem;
+}
+
+.nav-item > a:hover {
+    color: gold;
+    transition-duration: 0.5s;
+
+}
+
+#main {
+    background-color: grey;
+    /*padding: 2.6rem 3.5rem 0rem 3.5rem;*/
+}
+
+.bc-section {
+    background-color: #181D31;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+
+#bc-content {
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    color: #678983;;
+}
+
+#bc-content > h1 {
+    font-size: 3rem;
+    font-weight: 200;
+}
+
+section {
+    background-color: salmon;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.section-header {    
+    padding: 2rem 0px 2.5rem 4rem;
+    font-weight: 500;
+    width: 90%;
+    color: #181D31;
+    text-align: center;
+}
+
+.projects-section {
+    background-color: #F0E9D2;
+    display: grid;
+
+}
+
+.projects-grid {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    grid-gap: 0.5rem;
+    grid-template-areas:
+        "project-1 project-2 project-3"
+        "project-4 project-5 project-6"
+        "project-7 project-8 project-9"
+        "button-container button-container button-container"
+}
+
+.project-tile {
+    font-size: 15px;
+    padding: 0.5rem;
+}
+
+.project-tile > a {
+    display: grid;
+    transition: 0s;
+}
+
+#project-5 > a > img {
+    width: 80%
+}
+
+#project-7 > a > img {
+    width: 80%;
+}
+
+#project-8 > a > img {
+    width: 80%;
+}
+
+#project-9 > a > img {
+    width: 80%;
+}
+
+.code {
+    display: none;
+}
+
+.hover {
+    padding: 0px;
+}
+
+
+
+.p-title {
+    padding: 0.5rem;
+    color:rgb(45, 61, 83);
+}
+
+.hover:hover > .p-title {
+    font-weight: 600;
+    font-size: 14px;
+
+}
+
+.hover:hover > .p-title > .code {
+    display: inline-block;
+    color: rgb(243, 72, 34);
+    font-size: 14px;
+}
+
+.project-tile > a > img {
+    height: 16rem;
+    margin-bottom: 1rem;
+}
+
+.project-tile > a >  img, .p-title {
+    justify-self: center;
+}
+
+#project-1 {
+    grid-area: project-1;
+}
+
+#project-2 {
+    grid-area: project-2;
+}
+
+#project-3 {
+    grid-area: project-3;
+}
+
+#project-4 {
+    grid-area: project-4;
+}
+
+#project-5 {
+    grid-area: project-5;
+}
+
+#project-6 {
+    grid-area: project-6;
+}
+
+#project-7 {
+    grid-area: project-7;
+}
+
+#project-8 {
+    grid-area: project-8;
+}
+
+#project-9 {
+    grid-area: project-9;
+}
+
+#button-container {
+    margin-top: 25px;
+    margin-bottom: 15px;
+    display: grid;
+    justify-content: center;
+}
+
+#button {
+    text-align: center;
+    font-size: 22px;
+    padding: 0px 2rem 0px 2rem;
+}
+
+#button > a {
+    color: #181D31;
+}
+
+#button > a:hover {
+    color: orangered;
+    font-weight: 700;
+
+}
+
+
+.skills-section > .section-header {
+    color: #678983;
+}
+
+.skills-grid {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+    grid-template-areas:
+        "skill-1 skill-2"
+}
+
+.skill-tile {
+    display: grid;
+    font-size: 15px;
+    padding-bottom: 1rem;
+    color: #678983;
+    line-height: 1rem;
+    border-left: solid;
+    border-width: thin;
+    font-weight: 200;
+}
+
+.skill-tile > h3 {
+    padding-left: 10px;
+    margin-top: 1rem;
+    margin-bottom: 0.2rem;
+    color: #678983;
+    font-size: 20px;
+}
+
+.s-title {
+    padding: 0.8rem 0px 0.3rem 2.5rem;
+    line-height: 1rem;
+}
+
+.s-title > a {
+    padding: 0px;
+    color: #E6DDC4;
+}
+
+.s-title > a:hover {
+    color: gold;
+}
+
+.parenthesis {
+    font-size: 10px;
+}
+
+.paragraph > a {
+    padding: 0px;
+    margin: 0px;
+}
+
+#info-systems {
+    font-size: 20px;
+}
+
+#skill-1 {
+    grid-area: skill-1;
+}
+
+#skill-2 {
+    grid-area: skill-2;
+}
+
+
+.section-content {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+.section-content > img {
+    width: 250px;
+    height: 250px;
+    border-style: solid;
+    border-width: thin;
+    border-color: #E6DDC4;
+    margin-bottom: 1.5rem;
+    border-radius: 50%;
+}
+
+.paragraph {
+    padding: 0.5rem 0px 1rem 0px;
+    font-weight: 200;
+    color: #181D31;
+}
+
+.paragraph > strong {
+    font-weight: 700;
+}
+
+.paragraph > strong > a {
+    padding: 0px;
+    color:rgb(45, 61, 83);
+}
+
+.paragraph > strong > a:hover {
+    padding: 0px;
+    color: gold;
+}
+
+.skills-section {
+    background-color: #181D31;
+    padding-bottom: 3rem;
+}
+
+.about-section {
+    background-color: #678983;
+}
+
+.contact-section {
+    background-color: #F0E9D2;
+    padding-bottom: 3rem;
+}
+
+.contact-section > h2 {
+    padding-bottom: 1rem;
+}
+
+#contact-content {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact-item > a {
+    padding: 8px;
+    font-size: 14px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    color: #181D31;
+}
+
+.contact-item > a:hover {
+    color: orangered;
+}
+
+.contact-item > a > img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+#footer { 
+    background-color: #1A374D;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.footer-item {
+    font-size: 12px;
+    color: #E6DDC4;
+}
